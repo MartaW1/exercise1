@@ -5,13 +5,13 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.util.Date;
-
 @Getter
 @Setter
-@NoArgsConstructor
 @AllArgsConstructor
-public class AllegroQueryResponse {
-   private String name;
-   private Date date;
+@NoArgsConstructor
+public class EbayToken {
+    private String access_token;
+    private int expires_in;
+    private String refresh_token;
+    private String token_type;
 }

@@ -1,27 +1,23 @@
-package com.martaw.exercise.model;
+package com.martaw.exercise.model.ebayRespose;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
-@Entity
 @Getter
 @Setter
-@AllArgsConstructor
 @NoArgsConstructor
-public class EbayToken {
+@AllArgsConstructor
+@Entity
+public class AdditionalImage {
     @Id
     @GeneratedValue
     private Integer id;
-    @Column(length = 100000)
-    private String access_token;
-    private int expires_in;
-    private String refresh_token;
-    private String token_type;
+
+    private String imageUrl;
 }

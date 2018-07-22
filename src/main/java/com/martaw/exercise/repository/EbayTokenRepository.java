@@ -2,17 +2,9 @@ package com.martaw.exercise.repository;
 
 
 import com.martaw.exercise.model.EbayToken;
-import org.springframework.stereotype.Component;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-@Component
-public class EbayTokenRepository {
-    private EbayToken lastToken;
-
-    public void save(EbayToken ebayToken) {
-        lastToken = ebayToken;
-    }
-
-    public EbayToken getToken() {
-        return lastToken;
-    }
+@Repository
+public interface EbayTokenRepository extends JpaRepository<EbayToken, Integer> {
 }

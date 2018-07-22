@@ -1,12 +1,9 @@
 package com.martaw.exercise.repository;
 
-import org.springframework.stereotype.Component;
+import com.martaw.exercise.model.EbayQueryRequest;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-@Component
-public class EbayRequestRepository {
-    private String lastRequest;
-
-    public void save(String query) {
-        lastRequest = query;
-    }
+@Repository
+public interface EbayRequestRepository extends JpaRepository<EbayQueryRequest, Integer> {
 }

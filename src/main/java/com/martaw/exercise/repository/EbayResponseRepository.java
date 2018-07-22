@@ -1,13 +1,9 @@
 package com.martaw.exercise.repository;
 
-import com.martaw.exercise.model.EbayQueryResponse;
-import org.springframework.stereotype.Component;
+import com.martaw.exercise.model.ebayRespose.EbayQueryResponse;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-@Component
-public class EbayResponseRepository {
-    private EbayQueryResponse lastEbayQueryResponse;
-
-    public void save(EbayQueryResponse ebayQueryResponse) {
-        lastEbayQueryResponse = ebayQueryResponse;
-    }
+@Repository
+public interface EbayResponseRepository extends JpaRepository<EbayQueryResponse, Integer>{
 }

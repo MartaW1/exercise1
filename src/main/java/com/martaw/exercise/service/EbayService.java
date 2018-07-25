@@ -23,7 +23,7 @@ public class EbayService {
     EbayTokenRepository ebayTokenRepository;
 
     private static final Integer DEFAULT_MAX_RESULTS = 50;
-    private static final Integer DEFAULT_RESULTS_OFFSET = 50;
+    private static final Integer DEFAULT_RESULTS_OFFSET = 0;
     private static final Integer DEFAULT_MAX_ITEM_PRICE = null;
 
     public EbayQueryResponse searchQuery(EbayQueryRequest ebayQueryRequest) {

@@ -67,13 +67,13 @@ public class EbayClientService {
     }
 
     public String buildUrl(EbayQueryRequest ebayQueryRequest) {
-        String priceUrl = "https://api.sandbox.ebay.com/buy/browse/v1/item_summary/" +
+        String url = "https://api.sandbox.ebay.com/buy/browse/v1/item_summary/" +
                 "search?q=" + ebayQueryRequest.getQuery() +
                 "&limit=" + ebayQueryRequest.getMaxResults();
 
         if (ebayQueryRequest.getMaxItemPrice() != null) {
-            priceUrl += "&filter=price:[0.." + ebayQueryRequest.getMaxItemPrice() + "]";
+            url += "&filter=price:[0.." + ebayQueryRequest.getMaxItemPrice() + "]";
         }
-        return priceUrl;
+        return url;
     }
 }

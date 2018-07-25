@@ -3,6 +3,7 @@ package com.martaw.exercise.controller;
 import com.martaw.exercise.model.EbayQueryRequest;
 import com.martaw.exercise.model.EbayToken;
 import com.martaw.exercise.model.ebayRespose.EbayQueryResponse;
+import com.martaw.exercise.model.exception.ServiceNotAvailableException;
 import com.martaw.exercise.service.EbayService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;

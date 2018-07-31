@@ -11,10 +11,8 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExcep
 @ControllerAdvice
 public class ExceptionHandler extends ResponseEntityExceptionHandler {
 
-    @org.springframework.web.bind.annotation.ExceptionHandler
-            (value = {ServiceNotAvailableException.class})
-
-    protected ResponseEntity<Object> handleConflict(RuntimeException ex, WebRequest request) {
+    @org.springframework.web.bind.annotation.ExceptionHandler(value = {ServiceNotAvailableException.class})
+    protected ResponseEntity<Object> serviceNotAvailable(RuntimeException ex, WebRequest request) {
         String bodyOfResponse = "ServiceNotAvailable";
         return handleExceptionInternal(ex, bodyOfResponse,
                 new HttpHeaders(), HttpStatus.SERVICE_UNAVAILABLE, request);
